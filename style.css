@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  /*sans-serif is the "fallback font"
+/*   fhref="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" */
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 10px;
+  font-family: "Lato";
+  line-height: 1.5;
+  background-color: white;
+  color: black;
+  width: 900px;
+}
+
+.container {
+  background-color: #eeeeee;
+  position: relative;
+  border: 1px solid black;
+}
+
+.image {
+  margin-left: 10px;
+  position: relative;
+}
+/*  creating flex boxes for the description section. 1 parent box and 2 children boxes. The parent box is the overall box containing all of the content above the canvas.*/
+.flex-container {
+  display: flex;
+  /*   border: 2px solid black; */
+  max-width: 1000px;
+  border: 1px solid black;
+  margin: 20px;
+}
+/*  this child box is for the left side of the canvas containing the image and the caption*/
+#flex-container .side1 {
+  flex: 1 1 0;
+  flex-wrap: wrap;
+}
+/*  this child box is for the right side of the canvas with the intro paragraphs and legend*/
+
+#flex-container .side2 {
+  flex: 1 1 0;
+  flex-wrap: wrap;
+  flex-grow: 0;
+}
+.title {
+  font-family: "Lato", sans-serif;
+  font-style: 900;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 105%;
+  margin: 20px;
+  position: relative;
+  color: black;
+}
+
+.heading {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.sub-heading {
+  font-family: "Lato", sans-serif;
+  font-style: 900;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 105%;
+  margin: 20px;
+  position: relative;
+  color: black;
+}
+
+.main-text {
+  margin: 20px;
+  font-family: "Lato", sans-serif;
+}
+.legend-text {
+  font-size: 10px;
+  margin-left: 150px;
+}
