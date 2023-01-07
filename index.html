@@ -1,0 +1,104 @@
+<meta charset="utf-8" />
+<link rel="stylesheet" href="style.css" />
+<!-- import the webpage's javascript file -->
+<script src="script.js" defer></script>
+<!-- Load d3.js -->
+
+<script src="https://d3js.org/d3.v6.js"></script>
+<script src="https://d3js.org/d3-contour.v1.min.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<h1 class="title">Exploring Friending Bias in U.S. Public Schools</h1>
+
+<h3 class="heading">About</h3>
+<p class="main-text">
+  This project builds off of social capital and education policy research from
+  Plural Connections, an interdisciplinary research and action lab based at
+  Northeastern University. Using schools-level data from the
+  <a
+    href="https://www.socialcapital.org/?dimension=EconomicConnectednessIndividual&dim1=EconomicConnectednessIndividual&dim2=CohesivenessClustering&dim3=CivicEngagementVolunteeringRates&geoLevel=county&selectedId=40153"
+    >Social Capital Atlas </a
+  >, users can explore average friending bias in schools across the U.S. by the
+  school's percentage of specified demographic groups.
+</p>
+<p class="main-text">
+  <b>Friending bias</b> is defined as "the likelihood that low-income people
+  form friendships with the high-income (above-median) income people that
+  they're exposed to." Friending bias is derived from Raj Chetty et al's
+  <a href="https://opportunityinsights.org/"> Opportunity Index </a>report,
+  which draws from privacy-protected data on 21 billion friendships from
+  Facebook.
+</p>
+
+<p class="main-text">
+  Building off of Chetty's research, which found that at the community level,
+  cross-class connections boost social mobility more than anything else,
+  including racial segregation, economic inequality, educational outcomes, and
+  family structure, this project is part of a larger effort to explore factors
+  that affect social capital in the American education system. As this research
+  is ongoing, this tool is meant to help interested audiences explore these
+  factors on the school level, rather than point to any causative relationships.
+</p>
+<h3 class="heading">Explore the data</h3>
+<div class="flex-container">
+  <h3 class="heading">Navigation guide</h3>
+  <div class="side1">
+    <h3 class="sub-heading">Select</h3>
+    <p class="main-text">
+      Select the demographic group of your choosing to see the relationship
+      between its percentage of the overall school population to friending bias
+      across U.S. schools.
+    </p>
+    <h3 class="sub-heading">Hover</h3>
+    <p class="main-text">
+      Hover your cursor over any point in the scatterplot to get its school NCES
+      ID and friending bias measure.
+    </p>
+  </div>
+  <div class="side2">
+    <h3 class="sub-heading">Zoom</h3>
+    <p class="main-text">
+      The input box below can be used to zoom in on the plot. For example, if
+      you want to zoom in on the 10th percentile of the selected population,
+      enter "10", for the 50th percentile, enter "50", and so on. The x-axis
+      will adjust accordingly.
+    </p>
+
+    <h3 class="sub-heading">Color legend</h3>
+    <p class="main-text">
+      The color of the circles represents <b> exposure</b>, defined as the share
+      of high (above-median) income people in low (below-median) income people's
+      communities.
+    </p>
+    <div class="legend-text">Exposure (Low - High)</div>
+    <img
+      class="image"
+      src="https://cdn.glitch.global/44cb82f5-eadc-4f0e-8a8a-b2c0628d8ebd/sequential_legend.png?v=1670872767339"
+      width="400px"
+    />
+  </div>
+</div>
+<body>
+  <input type="number" id="buttonXlim" value="9" />
+  <div id="my_dataviz">
+    <button id="updateButtonAsn" onclick="updateDataAsn();">
+      Asian student population (%)
+    </button>
+    <button id="updateButtonBlk" onclick="updateDataBlk();">
+      Black student population (%)
+    </button>
+    <button id="updateButtonHsp" onclick="updateDataHsp();">
+      Hispanic student population (%)
+    </button>
+    <button id="updateButtonWhite" onclick="updateDataWhite();">
+      White student population (%)
+    </button>
+    <button id="updateButtonNam" onclick="updateDataNam();">
+      Native American/Pacific Islander student population (%)
+    </button>
+    <button id="updateButtonFrl" onclick="updateDataFrl();">
+      Free/Reduced Lunch student population (%)
+    </button>
+  </div>
+  <!-- <div id="dataviz_brushZoom"></div> -->
+</body>
