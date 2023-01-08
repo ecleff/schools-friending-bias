@@ -4,7 +4,7 @@ This project builds off of social capital and education policy research from Plu
 
 Check out the project here: https://friending-bias-final-proj.glitch.me/ (powered by Glitch)
 
-I wrote a blog post detailing the process of creating this project as well. Check that out here: https://emily-final-vizfolio.glitch.me/blog.html
+Here's a blog post I wrote detailing the process of creating this project: https://emily-final-vizfolio.glitch.me/blog.html
 
 Sources:
 https://opportunityinsights.org/
